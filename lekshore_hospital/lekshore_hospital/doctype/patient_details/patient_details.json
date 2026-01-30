@@ -9,9 +9,16 @@
   "tab_2_tab",
   "patient_details_section",
   "full_name",
+  "phone",
+  "column_break_ehub",
   "age",
   "gender",
-  "phone"
+  "address_details_section",
+  "address_1",
+  "address_2",
+  "column_break_hhrj",
+  "pincode",
+  "select_doctor"
  ],
  "fields": [
   {
@@ -50,12 +57,49 @@
    "fieldtype": "Phone",
    "label": "Phone",
    "reqd": 1
+  },
+  {
+   "description": "Deatils of House",
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": "Address 1",
+   "mandatory_depends_on": "phone"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Int",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "column_break_ehub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "age",
+   "fieldname": "address_details_section",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "column_break_hhrj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_doctor",
+   "fieldtype": "Link",
+   "label": "Select Doctor",
+   "options": "Doctor"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 19:20:03.921897",
+ "modified": "2026-01-28 12:12:52.396733",
  "modified_by": "Administrator",
  "module": "Lekshore Hospital",
  "name": "patient details",
@@ -77,6 +121,7 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "search_fields": "full_name,phone",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

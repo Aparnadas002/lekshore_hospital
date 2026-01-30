@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-19 22:21:44.037314",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "phone_number",
+  "patient_name",
+  "age",
+  "gender",
+  "column_break_xjip",
+  "doctor_name",
+  "appointment_data",
+  "status",
+  "medicines_section",
+  "medicine_issued"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment_data",
+   "fieldtype": "Date",
+   "label": "Appointment Data"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nScheduled\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "patient details"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "column_break_xjip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medicines_section",
+   "fieldtype": "Section Break",
+   "label": "Medicines "
+  },
+  {
+   "fieldname": "medicine_issued",
+   "fieldtype": "Table",
+   "label": "Medicine Issued",
+   "options": "Prescription item"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-21 14:36:13.208417",
+ "modified_by": "Administrator",
+ "module": "Lekshore Hospital",
+ "name": "Patient Record Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

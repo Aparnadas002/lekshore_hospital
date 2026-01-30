@@ -1,15 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "prompt",
  "creation": "2026-01-12 13:37:38.614797",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "doctor_schedule_section",
-  "doctor_name",
+  "dr_id",
   "specialization",
-  "available_date",
-  "time_slot"
+  "time_slot",
+  "time",
+  "column_break_getf",
+  "doctor_name",
+  "available_date"
  ],
  "fields": [
   {
@@ -18,15 +22,17 @@
    "label": "Doctor Schedule"
   },
   {
+   "fetch_from": "dr_id.full_name",
    "fieldname": "doctor_name",
    "fieldtype": "Data",
-   "label": "Doctor Name"
+   "label": "Doctor Name",
+   "read_only": 1
   },
   {
+   "fetch_from": "dr_id.specialization",
    "fieldname": "specialization",
-   "fieldtype": "Select",
-   "label": "Specialization",
-   "options": "General Medicine\nCardiology\nPediatrics"
+   "fieldtype": "Data",
+   "label": "Specialization"
   },
   {
    "fieldname": "available_date",
@@ -38,15 +44,31 @@
    "fieldtype": "Select",
    "label": "Time Slot",
    "options": "10:00AM-11:00AM\n02:00 PM- 03:PM"
+  },
+  {
+   "fieldname": "dr_id",
+   "fieldtype": "Link",
+   "label": "Doctor's ID",
+   "options": "Doctor"
+  },
+  {
+   "fieldname": "column_break_getf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "time"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 19:20:04.494294",
+ "modified": "2026-01-29 12:19:45.000763",
  "modified_by": "Administrator",
  "module": "Lekshore Hospital",
  "name": "Doctor Schedule",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

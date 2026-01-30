@@ -6,11 +6,14 @@
  "engine": "InnoDB",
  "field_order": [
   "appointment_record_section",
+  "phone_number",
   "patient",
+  "column_break_wtqs",
   "doctor",
   "appointment_date",
   "time_slot",
-  "payment_status"
+  "payment_status_section",
+  "token_number"
  ],
  "fields": [
   {
@@ -33,7 +36,9 @@
   {
    "fieldname": "appointment_date",
    "fieldtype": "Date",
-   "label": "Appointment Date"
+   "in_list_view": 1,
+   "label": "Appointment Date",
+   "reqd": 1
   },
   {
    "fieldname": "time_slot",
@@ -41,16 +46,31 @@
    "label": "Time Slot"
   },
   {
-   "fieldname": "payment_status",
-   "fieldtype": "Select",
-   "label": "Payment Status",
-   "options": "Unpaid\nPaid"
+   "fieldname": "column_break_wtqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status_section",
+   "fieldtype": "Section Break",
+   "label": "Token  Number"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "token_number",
+   "fieldtype": "Int",
+   "label": "Token Number"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 19:20:04.256652",
+ "modified": "2026-01-29 17:25:31.315493",
  "modified_by": "Administrator",
  "module": "Lekshore Hospital",
  "name": "Appointment Record",
